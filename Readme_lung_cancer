@@ -1,0 +1,55 @@
+#  Lung Cancer Risk Prediction using Ensemble Learning
+
+This project uses machine learning to **predict the likelihood of lung cancer** in patients based on lifestyle and health features. Multiple models are trained and then combined into an **ensemble model** for improved performance.
+
+---
+
+##  Dataset
+
+The dataset (`lung_cancer_examples.csv`) includes the following features for each patient:
+
+| Feature     | Description                                |
+|-------------|--------------------------------------------|
+| Name        | Patient's first name (not used in model)   |
+| Surname     | Patient's surname (not used in model)      |
+| Age         | Age in years                               |
+| Smokes      | Smoking frequency (approx. cigarettes/day) |
+| AreaQ       | Air quality score in patient's area        |
+| Alkhol      | Alcohol intake frequency                   |
+| Result      | Target label: 1 = High Risk, 0 = Low Risk  |
+
+Total records: **10 (sample dataset)**
+
+---
+
+##  Models Trained
+
+- **Logistic Regression**
+- **Random Forest Classifier**
+- **XGBoost Classifier**
+
+---
+
+## Ensemble Learning
+
+All three models were combined using a **soft voting ensemble classifier**, which takes the average of predicted probabilities and chooses the most confident class.
+
+### Performance
+
+| Model               | Accuracy |
+|--------------------|----------|
+| Logistic Regression| ~xx%     |
+| Random Forest      | ~xx%     |
+| XGBoost            | ~xx%     |
+| **Ensemble Model** | **xx%**  |
+
+*(Exact scores depend on test split; sample size is small.)*
+
+---
+
+## How to Use the Model
+
+1. **Install dependencies:**
+
+```bash
+pip install scikit-learn xgboost joblib
